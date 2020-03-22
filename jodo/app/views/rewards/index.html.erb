@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+
+<div class="head">
+        <div class="date"> 
+            <h1>12</h1>
+            <h2>Jan 2016</h2>
+            <h2 class="week-day">Tuesday</h2>
+        </div>
+    </div>
+
+
+  <tbody>
+    <% @rewards.each do |reward| %>
+      <tr>
+        <td><%= reward. tasks %></td>
+        <td><input type="checkbox" aria-label="Checkbox for following text input"></td>
+        <td><%= link_to 'Destroy', reward, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <br>
+      </tr>
+    <% end %>
+  </tbody>
+
+<br>
+<br><br><br><br>
+
+<%= link_to 'New Task', new_reward_path %>
+

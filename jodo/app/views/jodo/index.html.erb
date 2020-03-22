@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jodo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../../../app/assets/stylesheets/jodo.css" rel"stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div class="head">
+        <div class="date"> 
+            <h1>12</h1>
+            <h2>Jan 2016</h2>
+            <h2 class="week-day">Tuesday</h2>
+        </div>
+    </div>
+  
+    <div class="body jumbotron" style="background-color: white;">
+        <div class="input-group mb-3">
+
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+            </div>
+        </div>
+    </div>  
+
+    
+    <%= yield %>
+  </body>
+</html>

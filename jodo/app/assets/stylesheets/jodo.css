@@ -1,0 +1,16 @@
+.date {
+    display: flex;
+    background-color: white;
+    padding: 50px;
+}
+.date h1 {
+    font-size: 80px;
+}
+.week-day {
+    padding-left: 1000px;
+}
+
+.body {
+    text-align: center;
+    background-color: white;
+}
