@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+<table>
+  <thead>
+    <tr>
+      <div class="head d-flex flex-row">
+        <h1>12</h1>
+        <h2>Jan 2016</h2>
+        <h1 style="padding-left: 1000px; font-size: 30px;">TUESDAY</h1>
+      </div>
+    </tr> 
+  </thead>
+
+
+  <tbody>
+    <div class="task">
+      <% @tasks.each do |task| %>
+        <%= task.task %>
+        <input type="checkbox" aria-label="Checkbox for following text input">
+        <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %> <br>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<br>
+
+
+<div style="text-align: center;">
+  <%= link_to 'New Task', new_task_path %>
+</div>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
