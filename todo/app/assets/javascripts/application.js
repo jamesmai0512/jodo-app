@@ -30,6 +30,8 @@ $(document).ready(function(){
 
         // The val() method returns or sets the value attribute of the selected elements.
         // https://www.w3schools.com/jquery/html_val.asp
+        console.log($(this).val())
+        var taskId = $(this).val();
 
         // is(): This method is also very simple and easy to use.
         // By using this we can easily find whether a checked box is checked or not.
@@ -37,6 +39,25 @@ $(document).ready(function(){
         // this --> is input type checkbox element
         // $(this).is(":checked")
         console.log($(this).is(":checked"))
+        var completedCheckbox = $(this).is(":checked");
+
+        // How to call PUT from javascript???
+        // Answer: AJAX
+        // AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+        // https://www.w3schools.com/jquery/jquery_ajax_intro.asp
+        // Options:
+        // method: The HTTP method to use for the request (e.g. "POST", "GET", "PUT").
+        // url: A string containing the URL to which the request is sent.
+        // data: Data to be sent to the server
+        // https://api.jquery.com/jquery.ajax/
+        $.ajax({
+            method: "PUT",
+            url: "tasks/" + taskId + "/toggle", // tasks/2/toggle
+            data: { status: completedCheckbox }
+        }).done(function( msg ) {
+            console.log("updated")
+        });
+
     });
 
 });

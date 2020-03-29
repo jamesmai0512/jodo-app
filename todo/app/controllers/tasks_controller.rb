@@ -61,6 +61,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def toggle
+    # Find - Find by id 
+    # https://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find
+    task = Task.find(params[:id])
+    # Update an existing record
+    # https://guides.rubyonrails.org/active_record_basics.html#update
+    # task.update(completed: params[:status])
+    task.completed = params[:status]
+    task.save
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
