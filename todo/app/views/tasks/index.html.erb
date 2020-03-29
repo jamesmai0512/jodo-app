@@ -17,7 +17,7 @@
     <div class="task">
       <% @tasks.each do |task| %>
         <%= task.task %>
-        <%= check_box_tag "task_ids", task.id, task.completed %>
+        <%= check_box_tag "task_ids", task.id, task.completed, class: "completed-check" %>
         <!-- The check_box_tag is a input type checkbox -->
         <%= link_to 'Edit', edit_task_path(task) %>
         <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %> <br>
